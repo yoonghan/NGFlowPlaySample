@@ -31,7 +31,7 @@ case class FlowInfo(resumableChunkSize: Int,
     println("resumable ts :"+resumableTotalSize)
     println("resumable cs :"+resumableChunkSize)
     println("count :"+count)
-    (1 to count).map {
+    (1 until count).map {
       i =>
         println("i >"+i)
         if (!uploadedChunks.contains(i)) {
